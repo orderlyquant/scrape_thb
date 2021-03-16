@@ -22,7 +22,7 @@ jobs:
     # Set-up R
     - name: Install packages
       run: |
-        R -e 'install.packages("tibble", "magrittr", "stringr", "dplyr", "tidyr", "purrr", "rvest")'
+        R -e 'install.packages(c("tibble", "magrittr", "stringr", "dplyr", "tidyr", "purrr", "rvest"))'
     # Run R script
     - name: Scrape
       run: Rscript scrape_thb.R
