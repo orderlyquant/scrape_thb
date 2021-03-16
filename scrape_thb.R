@@ -18,7 +18,6 @@ for_sale_items <- tibble(
 )
 
 # pull all item details
-tictoc::tic()
 for_sale_items <- for_sale_items %>%
   rowwise() %>%
   mutate(
@@ -34,7 +33,7 @@ for_sale_items <- for_sale_items %>%
       sep = "\n"
     )
   )
-tictoc::toc()
+
 # build a multipurpose function to extract:
 
 # 1. whether item `is_beer`
@@ -129,9 +128,6 @@ get_item_contents <- function(desc) {
 jj <- for_sale_items %>%
   mutate(find_beers = map(desc, get_item_contents)) %>%
   unnest_wider(find_beers)
-
-jj %>% filter(is_beer) %>% select(item)
-
 
 jj %>%
   select(-html, -desc) %>%
