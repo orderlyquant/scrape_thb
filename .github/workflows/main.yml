@@ -3,10 +3,10 @@ name: thb_scrape
 
 # Controls when the action will run.
 on:
-  push:
-    branches: main
-  #schedule:
-  #  - cron:  '0 13 * * *'
+  #push:
+    #branches: main
+  schedule:
+    - cron:  '0 13 * * *'
 
 
 jobs: 
@@ -22,12 +22,7 @@ jobs:
     # Set-up R
     - name: Install packages
       run: |
-        R -e 'install.packages("tibble")'
-        R -e 'install.packages("magrittr")'
-        R -e 'install.packages("stringr")'
-        R -e 'install.packages("dplyr")'
-        R -e 'install.packages("tidyr")'
-        R -e 'install.packages("purr")'
+        R -e 'install.packages("tidyverse")'
         R -e 'install.packages("rvest")'
     # Run R script
     - name: Scrape
