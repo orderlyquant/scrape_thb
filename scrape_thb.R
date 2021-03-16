@@ -137,4 +137,4 @@ jj <- for_sale_items %>%
 jj %>%
   select(-html, -desc) %>%
   unnest(cols = c(contents), keep_empty = TRUE) %>%
-  write_csv(paste0("data/", Sys.Date(),'_thb','.csv'))
+  write.csv(paste0("data/", Sys.Date(),'_thb','.csv'))
