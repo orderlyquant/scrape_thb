@@ -5,7 +5,7 @@ library(magrittr)
 library(stringr)
 library(dplyr)
 library(tidyr)
-library(purr)
+library(purrr)
 library(rvest)
 
 treehouse_url <- "https://treehousebrew.com/shop"
