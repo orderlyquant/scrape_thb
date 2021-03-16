@@ -1,6 +1,11 @@
-## rvesting treehouse brews for sale
+## rvesting brews for sale
 
-library(tidyverse)
+library(tibble)
+library(magrittr)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(purrr)
 library(rvest)
 
 treehouse_url <- "https://treehousebrew.com/shop"
