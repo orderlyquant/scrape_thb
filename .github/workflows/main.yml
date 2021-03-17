@@ -1,6 +1,8 @@
 # Hourly scraping
 name: thb_scrape
 
+# inspired by: https://www.programmingwithr.com/daily-stock-gainers-automated-web-scraping-in-r-with-github-actions/
+
 # Controls when the action will run.
 on:
   # push:
